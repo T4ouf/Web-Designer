@@ -22,8 +22,9 @@ public class Main extends Application {
  
         Button buttonURL = new Button("Load Page https://eclipse.org");
         Button buttonHtmlString = new Button("Load HTML String");
-        //Button buttonHtmlFile = new Button("Load File C:/test/a.html");
- 
+        Button buttonHtmlFile = new Button("Load local HTML File");
+        Button buttonHtmlJSFile = new Button("Load local HTML-JS");
+        
         final WebView browser = new WebView();
         final WebEngine webEngine = browser.getEngine();
  
@@ -46,15 +47,14 @@ public class Main extends Application {
                 webEngine.loadContent(html);
             }
         });
-/*
+
          buttonHtmlFile.setOnAction(new EventHandler<ActionEvent>() {
  
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    File file = new File("PATH_TO_HTML");
+                    File file = new File("./deps/Website_example/structure.html");
                     URL url = file.toURI().toURL();
-                    // file:/C:/test/a.html
                     System.out.println("Local URL: " + url.toString());
                     webEngine.load(url.toString());
                 } catch (MalformedURLException e) {
@@ -63,11 +63,27 @@ public class Main extends Application {
  
             }
         });
- */
+         
+         buttonHtmlJSFile.setOnAction(new EventHandler<ActionEvent>() {
+        	 
+             @Override
+             public void handle(ActionEvent event) {
+                 try {
+                     File file = new File("./deps/Animation_example/canvasf.html");
+                     URL url = file.toURI().toURL();
+                     System.out.println("Local URL: " + url.toString());
+                     webEngine.load(url.toString());
+                 } catch (MalformedURLException e) {
+                     e.printStackTrace();
+                 }
+  
+             }
+         });
+ 
         VBox root = new VBox();
         root.setPadding(new Insets(5));
         root.setSpacing(5);
-        root.getChildren().addAll(buttonURL, buttonHtmlString, browser);
+        root.getChildren().addAll(buttonURL, buttonHtmlString,buttonHtmlFile, buttonHtmlJSFile, browser);
  
         Scene scene = new Scene(root);
  
