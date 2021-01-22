@@ -1,9 +1,11 @@
-package tutoriel;
+package application;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
- 
+
+import org.w3c.dom.Document;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -45,6 +47,11 @@ public class Main extends Application {
                 String html = "<html><h1>Hello</h1><h2>Hello</h2></html>";
                 // Load HTML String
                 webEngine.loadContent(html);
+                
+                //Parse the HTML content with Jsoup
+                Document doc = Jsoup.parse(html);
+                System.out.println(doc.toString());
+
             }
         });
 
