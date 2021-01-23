@@ -4,8 +4,6 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.w3c.dom.Document;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,6 +14,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 public class Main extends Application {
 
@@ -44,15 +46,16 @@ public class Main extends Application {
 
 			@Override
 			public void handle(ActionEvent event) {
-				String html = "<html><h1>Hello</h1><h2>Hello</h2></html>";
-				// Load HTML String
-				webEngine.loadContent(html);
+                String html = "<html><h1>Hello 1</h1><h2 id=\"titreH2\">Hello 2</h2></html>";
+                // Load HTML String
+                webEngine.loadContent(html);
 
-				//Parse the HTML content with Jsoup
-				Document doc = Jsoup.parse(html);
-				System.out.println(doc.toString());
+                //Parse the HTML content with Jsoup
+                Document doc = Jsoup.parse(html);
+                Element h2 = doc.getElementById("titreH2");
+                System.out.println(h2.toString());
 
-			}
+            }
 		});
 
 		buttonHtmlFile.setOnAction(new EventHandler < ActionEvent > () {
