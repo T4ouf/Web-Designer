@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<palet id="1" name="DefaultFR">
+	<Prim1 		value="#0000ff" /> <!-- blue -->
+	<Prim1Var1	value="#00c5ff" /> <!-- cyan -->
+	<Prim1Var2	value="#000040" /> <!-- dark blue -->
+	
+	<Prim2 		value="#ffffff" /> <!-- white -->	
+	<Prim2Var1	value="#ededed" /> <!-- ligh grey -->
+	<Prim2Var2	value="#535353" /> <!-- dark grey -->
+	
+	<Prim3		value="#ff0000" /> <!-- red -->
+	<Prim3Var1	value="#ffc4c4" /> <!-- pink -->
+	<Prim3Var2	value="#5b0000" /> <!-- dark red -->
+</palet>

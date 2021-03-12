@@ -1,43 +1,28 @@
-
-h1,h2,h3{
-	
-	background-color:grey;
-	
-}
-
-.largeur{
-	word-wrap: break-word;
-}
-
-.hauteur{
-	/*Gère le cas où le texte dépasse d'un bloc
-	overflow:visible;	=>ça dépasse
-	overflow:hidden;	=>ça coupe
-	overflow:scroll;	=>met des scrollbars*/
-	overflow : auto;
-}
-
 p{
 	background-color:grey;
-	
-	/*taille d'un bloc (prop à la page) ou en pixel*/ 
+	border:1pxsolidblack;
+	padding:12px;
+	margin:50px;
 	width:50%;
 	height:50px;
-	
-	/*taille min d'un bloc*/
-	min-width : 400px;
-
-	border: 1px solid black;
-	text-align: justify;
-	padding: 12px; /* Marge intérieure de 12px */
-	margin: 50px; /* Marge extérieure de 50px */
-	
-	/*
-	Pour centrer, il faut respecter les règles suivantes :
-	donnez une largeur au bloc (avec la propriété width) ;
-	indiquez que vous voulez des marges extérieures automatiques: margin: auto;
-
-	*/
-		
-	
+	min-width:400px;
+	text-align:justify;
+}
+.Prim1{
+	background-color:#ff0000;
+}
+.hauteur{
+	overflow:auto;
+}
+.largeur{
+	word-wrap:break-word;
+}
+.PrimVar2{
+	background-color:#5b0000;
+}
+.PrimVar1{
+	background-color:#ffc4c4;
+}
+h1,h2,h3{
+	background-color:grey;
 }

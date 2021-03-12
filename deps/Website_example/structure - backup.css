@@ -1,0 +1,57 @@
+
+/*Palet prototyping*/
+.Prim1{
+	background-color:initial;
+}
+
+.PrimVar1{
+	background-color:initial;
+}
+
+.PrimVar2{
+	background-color:initial;
+}
+
+h1,h2,h3{
+	
+	background-color:grey;
+	
+	
+}
+
+.largeur{
+	word-wrap: break-word;
+}
+
+.hauteur{
+	/*Gère le cas où le texte dépasse d'un bloc
+	overflow:visible;	=>ça dépasse
+	overflow:hidden;	=>ça coupe
+	overflow:scroll;	=>met des scrollbars*/
+	overflow : auto;
+}
+
+p{
+	background-color:grey;
+	
+	/*taille d'un bloc (prop à la page) ou en pixel*/ 
+	width:50%;
+	height:50px;
+	
+	/*taille min d'un bloc*/
+	min-width : 400px;
+
+	border: 1px solid black;
+	text-align: justify;
+	padding: 12px; /* Marge intérieure de 12px */
+	margin: 50px; /* Marge extérieure de 50px */
+	
+	/*
+	Pour centrer, il faut respecter les règles suivantes :
+	donnez une largeur au bloc (avec la propriété width) ;
+	indiquez que vous voulez des marges extérieures automatiques: margin: auto;
+
+	*/
+		
+	
+}
