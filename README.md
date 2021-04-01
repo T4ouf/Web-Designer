@@ -1,12 +1,19 @@
 # Web-Designer
 The new revolutionary tool for web development 
 
-# Requirements
-- JDK 8 with JavaFX libraries (sorry AdoptOpenJDK)
-- Maven 3.6.x
+## Requirement
 
-# Build
-To build the JAR file, run (from the root of the repository):  
-```mvn clean jfx:jar```  
-Then, to start the application (version might be different):  
-```java -jar target/web-designer-0.0.1.jar```
+* Windows 10
+* Visual Studio 2017 (or above)
+
+## Build
+
+**NOTE : Currently, this project can only be build on Windows 10**
+
+To first build the raytracer, you will need to do the followings : 
+1. Clone the  github repository (https://github.com/T4ouf/Web-Designer.git)
+2. Execute "generateProject.bat" (either with a double-click or with a terminal)
+3. Launch the Visual Studio Solution ("Raytracer.sln")
+4. Generate the binary preferabily in "Release" mode (Check the mode then press CTRL+SHIFT+B)
+
+=> No error should appear : the build is a success !
