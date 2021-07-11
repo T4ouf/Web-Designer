@@ -1,8 +1,8 @@
 workspace "Web-Designer"
+	-- Web Designer is built for X64 systems
 	architecture "x64"
 
-	configurations
-	{
+	configurations {
 		"Debug",
 		"Release"
 	}
@@ -25,16 +25,17 @@ project "Web-Designer"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	files
-	{
+	pchheader "wdpch.h"
+	pchsource "Web-Designer/src/wdpch.cpp"
+
+	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.hpp",
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/src/**.c"
 	}
 
-	includedirs
-	{
+	includedirs {
 		"%{prj.name}/src"
 	}
 
@@ -43,19 +44,14 @@ project "Web-Designer"
 		cppdialect "C++17"
 		systemversion "latest"
 
-		defines
-		{
-			
-		}
-
-		postbuildcommands
-		{
-			
+		defines {
+			"WD_PLATFORM_WINDOWS"
 		}
 
 	filter "configurations:Debug"
 		defines {
 			"WD_DEBUG",
+			"WD_ENABLE_ASSERTS"
 		}
 		runtime "Debug"
 		symbols "On"
